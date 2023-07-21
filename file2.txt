@@ -1,0 +1,6 @@
+    - name: Stop the service
+      service:
+        name: my_web_service
+        state: stopped
+      tags:
+        - stop_service

@@ -1,0 +1,7 @@
+    - name: Start the service
+      service:
+        name: my_web_service
+        state: started
+      tags:
+        - start_service
+

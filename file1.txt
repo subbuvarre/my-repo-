@@ -1,0 +1,16 @@
+hi
+
+    - name: Check service health
+      uri:
+        url: http://localhost:80/healthcheck  # Replace with your service health check URL
+        method: GET
+      register: health_check_response
+      ignore_errors: yes
+      tags:
+        - health_check
+
+    - name: Display health check result
+      debug:
+        var: health_check_response
+      tags:
+        - health_check
